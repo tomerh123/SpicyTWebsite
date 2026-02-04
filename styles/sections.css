@@ -492,8 +492,8 @@
    AUDIENCE SEGMENTATION
    ======================================== */
 .audience {
-    background: #0D0D0D;
-    padding-top: 4rem;
+    background: transparent;
+    padding-top: 0;
 }
 
 .audience-split {
