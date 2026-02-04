@@ -173,11 +173,12 @@
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    gap: 1.5rem;
+    gap: 2rem;
     padding-bottom: 2rem;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    /* Firefox */
+    justify-content: center;
+    /* Center cards on desktop */
 }
 
 .carousel-container::-webkit-scrollbar {
@@ -262,13 +263,18 @@
     .difference-image-card {
         flex: 0 0 45%;
     }
+
+    .carousel-container {
+        justify-content: center;
+    }
 }
 
 @media (min-width: 1024px) {
 
     .difference-card,
     .difference-image-card {
-        flex: 0 0 30%;
+        flex: 0 0 40%;
+        /* Bigger tiles */
     }
 }
 
