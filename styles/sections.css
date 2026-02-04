@@ -376,6 +376,18 @@
 /* ========================================
    SERVICES SECTION
    ======================================== */
+.services {
+    position: relative;
+    background:
+        linear-gradient(135deg, rgba(255, 107, 53, 0.03) 25%, transparent 25%),
+        linear-gradient(225deg, rgba(255, 107, 53, 0.03) 25%, transparent 25%),
+        linear-gradient(45deg, rgba(255, 107, 53, 0.03) 25%, transparent 25%),
+        linear-gradient(315deg, rgba(255, 107, 53, 0.03) 25%, transparent 25%),
+        #0D0D0D;
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 0, 30px -30px, 0 30px;
+}
+
 .services-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -464,6 +476,17 @@
 /* ========================================
    AUDIENCE SEGMENTATION
    ======================================== */
+.audience {
+    position: relative;
+    background:
+        linear-gradient(135deg, rgba(255, 107, 53, 0.03) 25%, transparent 25%),
+        linear-gradient(225deg, rgba(255, 107, 53, 0.03) 25%, transparent 25%),
+        linear-gradient(45deg, rgba(255, 107, 53, 0.03) 25%, transparent 25%),
+        linear-gradient(315deg, rgba(255, 107, 53, 0.03) 25%, transparent 25%);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 0, 30px -30px, 0 30px;
+}
+
 .audience-split {
     display: grid;
     grid-template-columns: 1fr;
