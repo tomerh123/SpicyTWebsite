@@ -129,12 +129,14 @@ img {
 }
 
 /* Navigation */
+/* Navigation */
 header {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    padding: 0.8rem 0;
+    padding: 1rem 0;
+    /* Standard padding */
     transition: var(--transition);
     background: rgba(10, 10, 10, 0.85);
     backdrop-filter: blur(12px);
@@ -143,7 +145,7 @@ header {
 
 header.scrolled {
     background: rgba(10, 10, 10, 0.95);
-    padding: 0.5rem 0;
+    padding: 0.8rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -157,13 +159,17 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 80px;
+    /* Increased height to accommodate bigger logo */
+    position: relative;
+    /* For absolute centering of links */
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    z-index: 2;
+    /* Ensure logo is above centered links if overlap occurs */
 }
 
 .logo-img {
@@ -173,26 +179,28 @@ nav {
 }
 
 header.scrolled .logo-img {
-    height: 65px;
+    height: 60px;
 }
 
 .nav-links {
     display: flex;
-    gap: 3rem;
-    /* Increased gap */
+    gap: 2.5rem;
+    /* Slightly reduced gap for better fit */
     align-items: center;
-    margin: 0 auto;
-    /* Center links if possible, or adjust based on flex behavior */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
 }
 
 .nav-link {
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+    /* Clean, small premium text */
     color: var(--text-secondary);
     transition: var(--transition);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-size: 0.85rem;
+    letter-spacing: 1px;
 }
 
 .nav-link:hover {
@@ -203,6 +211,7 @@ header.scrolled .logo-img {
     display: flex;
     gap: 1.5rem;
     align-items: center;
+    z-index: 2;
 }
 
 .phone-link {
@@ -212,6 +221,7 @@ header.scrolled .logo-img {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    white-space: nowrap;
 }
 
 .phone-link i {
@@ -222,6 +232,11 @@ header.scrolled .logo-img {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+/* Hide mobile CTA in desktop menu */
+.mobile-cta {
+    display: none !important;
 }
 
 /* Animations */
