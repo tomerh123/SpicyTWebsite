@@ -173,13 +173,8 @@ nav {
 
 .logo-img {
     height: 100px;
-    /* Maximized logo height */
     width: auto;
     transition: var(--transition);
-}
-
-header.scrolled .logo-img {
-    height: 80px;
 }
 
 .nav-links {
