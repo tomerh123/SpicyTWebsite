@@ -287,16 +287,21 @@
 /* ========================================
    SPICYT DIFFERENCE SECTION
    ======================================== */
-.difference {
+.pattern-wrapper {
     position: relative;
     background:
         linear-gradient(135deg, rgba(255, 107, 53, 0.03) 25%, transparent 25%),
         linear-gradient(225deg, rgba(255, 107, 53, 0.03) 25%, transparent 25%),
         linear-gradient(45deg, rgba(255, 107, 53, 0.03) 25%, transparent 25%),
-        linear-gradient(315deg, rgba(255, 107, 53, 0.03) 25%, transparent 25%);
+        linear-gradient(315deg, rgba(255, 107, 53, 0.03) 25%, transparent 25%),
+        #0D0D0D;
     background-size: 100px 100px;
     background-position: 0 0, 50px 0, 50px -50px, 0 50px;
-    padding-bottom: 0;
+}
+
+.difference {
+    background: transparent;
+    padding-bottom: 2rem;
 }
 
 .difference-content h2 {
@@ -394,15 +399,7 @@
    SERVICES SECTION
    ======================================== */
 .services {
-    position: relative;
-    background:
-        linear-gradient(135deg, rgba(255, 107, 53, 0.03) 25%, transparent 25%),
-        linear-gradient(225deg, rgba(255, 107, 53, 0.03) 25%, transparent 25%),
-        linear-gradient(45deg, rgba(255, 107, 53, 0.03) 25%, transparent 25%),
-        linear-gradient(315deg, rgba(255, 107, 53, 0.03) 25%, transparent 25%),
-        #0D0D0D;
-    background-size: 100px 100px;
-    background-position: 0 0, 50px 0, 50px -50px, 0 50px;
+    background: transparent;
     padding-top: 2rem;
 }
 
@@ -495,14 +492,8 @@
    AUDIENCE SEGMENTATION
    ======================================== */
 .audience {
-    position: relative;
-    background:
-        linear-gradient(135deg, rgba(255, 107, 53, 0.03) 25%, transparent 25%),
-        linear-gradient(225deg, rgba(255, 107, 53, 0.03) 25%, transparent 25%),
-        linear-gradient(45deg, rgba(255, 107, 53, 0.03) 25%, transparent 25%),
-        linear-gradient(315deg, rgba(255, 107, 53, 0.03) 25%, transparent 25%);
-    background-size: 100px 100px;
-    background-position: 0 0, 50px 0, 50px -50px, 0 50px;
+    background: transparent;
+    padding-top: 0;
 }
 
 .audience-split {
