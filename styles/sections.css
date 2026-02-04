@@ -209,12 +209,16 @@
 }
 
 .difference-card.bad {
-    background: rgba(255, 50, 50, 0.1);
+    background: linear-gradient(rgba(45, 10, 10, 0.9), rgba(45, 10, 10, 0.95)), url('../assets/images/bg-server.jpg');
+    background-size: cover;
+    background-position: center;
     border: 1px solid rgba(255, 50, 50, 0.2);
 }
 
 .difference-card.good {
-    background: rgba(255, 107, 53, 0.1);
+    background: linear-gradient(rgba(45, 20, 10, 0.9), rgba(45, 20, 10, 0.95)), url('../assets/images/bg-smart-home.jpg');
+    background-size: cover;
+    background-position: center;
     border: 1px solid rgba(255, 107, 53, 0.3);
 }
 
@@ -289,7 +293,9 @@
     flex: 0 0 80%;
     /* Mobile width */
     scroll-snap-align: start;
-    background: var(--bg-card);
+    background: linear-gradient(rgba(20, 20, 20, 0.9), rgba(20, 20, 20, 0.95)), url('../assets/images/bg-smart-home.jpg');
+    background-size: cover;
+    background-position: center;
     padding: 2.5rem 2rem;
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.05);
