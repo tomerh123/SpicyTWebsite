@@ -130,13 +130,14 @@ img {
 
 /* Navigation */
 /* Navigation */
+/* Navigation */
 header {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    padding: 1rem 0;
-    /* Standard padding */
+    padding: 0.5rem 0;
+    /* Reduced vertical padding to let logo maximize space */
     transition: var(--transition);
     background: rgba(10, 10, 10, 0.85);
     backdrop-filter: blur(12px);
@@ -145,7 +146,7 @@ header {
 
 header.scrolled {
     background: rgba(10, 10, 10, 0.95);
-    padding: 0.8rem 0;
+    padding: 0.5rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -159,27 +160,26 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
-    /* Increased height to accommodate bigger logo */
+    height: 100px;
+    /* Increased to allow max logo size */
     position: relative;
-    /* For absolute centering of links */
 }
 
 .logo {
     display: flex;
     align-items: center;
     z-index: 2;
-    /* Ensure logo is above centered links if overlap occurs */
 }
 
 .logo-img {
-    height: 80px;
+    height: 100px;
+    /* Maximized logo height */
     width: auto;
     transition: var(--transition);
 }
 
 header.scrolled .logo-img {
-    height: 60px;
+    height: 80px;
 }
 
 .nav-links {
