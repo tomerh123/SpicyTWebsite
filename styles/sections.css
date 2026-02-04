@@ -367,28 +367,57 @@
 /* ========================================
    SERVICES SECTION
    ======================================== */
-.service-card {
-    flex: 0 0 80%;
-    /* Mobile width */
-    scroll-snap-align: start;
-    background: var(--bg-card);
-    padding: 2.5rem 2rem;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    text-align: center;
-    transition: var(--transition);
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
 }
 
 @media (min-width: 768px) {
-    .service-card {
-        flex: 0 0 45%;
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (min-width: 1024px) {
-    .service-card {
-        flex: 0 0 30%;
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
+}
+
+.service-card {
+    background: var(--bg-card);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 107, 53, 0.3);
+}
+
+.service-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.05);
+}
+
+.service-content {
+    padding: 2rem;
+    text-align: center;
 }
 
 .service-card:hover {
