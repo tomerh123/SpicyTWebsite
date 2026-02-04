@@ -256,6 +256,22 @@
     object-fit: cover;
 }
 
+@media (min-width: 768px) {
+
+    .difference-card,
+    .difference-image-card {
+        flex: 0 0 45%;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .difference-card,
+    .difference-image-card {
+        flex: 0 0 30%;
+    }
+}
+
 /* ========================================
    SERVICES SECTION
    ======================================== */
@@ -271,40 +287,16 @@
     transition: var(--transition);
 }
 
-.service-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(255, 107, 53, 0.3);
+@media (min-width: 768px) {
+    .service-card {
+        flex: 0 0 45%;
+    }
 }
 
-.service-icon {
-    width: 70px;
-    height: 70px;
-    margin: 0 auto 1.5rem;
-    background: var(--accent-gradient);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.service-icon i {
-    font-size: 1.8rem;
-    color: white;
-}
-
-.service-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-}
-
-.service-card p {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    line-height: 1.7;
-}
-
-text-align: center;
-transition: var(--transition);
+@media (min-width: 1024px) {
+    .service-card {
+        flex: 0 0 30%;
+    }
 }
 
 .service-card:hover {
