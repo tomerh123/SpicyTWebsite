@@ -204,6 +204,8 @@
     scroll-snap-align: center;
     padding: 2rem;
     border-radius: 12px;
+    text-align: center;
+    /* Center text */
 }
 
 .difference-card.bad {
@@ -221,6 +223,8 @@
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
+    justify-content: center;
+    /* Center header icon+text */
     gap: 0.5rem;
 }
 
