@@ -425,7 +425,8 @@
     position: relative;
     border-radius: 15px;
     overflow: hidden;
-    aspect-ratio: 16/10;
+    aspect-ratio: 4/3;
+    /* Taller/Bigger than 16/10 */
     cursor: pointer;
 }
 
