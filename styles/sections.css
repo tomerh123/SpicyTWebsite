@@ -9,7 +9,16 @@
 }
 
 .bg-darker {
-    background: #0D0D0D;
+    background: transparent;
+}
+
+/* Seamless section flow - no gap between patterned sections */
+.difference.section-padding {
+    padding-bottom: 2rem;
+}
+
+.services.section-padding {
+    padding-top: 2rem;
 }
 
 .section-subtitle {
