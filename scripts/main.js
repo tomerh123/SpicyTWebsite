@@ -48,6 +48,51 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Mobile Audience Carousel ---
+    const audienceSplit = document.querySelector('.audience-split');
+    const audienceDots = document.querySelectorAll('.audience-dot');
+    let currentAudienceIndex = 0;
+
+    if (audienceSplit && audienceDots.length > 0) {
+        // Update dots on scroll
+        audienceSplit.addEventListener('scroll', () => {
+            const scrollLeft = audienceSplit.scrollLeft;
+            const cardWidth = audienceSplit.offsetWidth;
+            const index = Math.round(scrollLeft / cardWidth);
+            currentAudienceIndex = index;
+
+            audienceDots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        });
+
+        // Click dot to scroll - only allow one step at a time
+        audienceDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                let targetIndex = index;
+                if (index > currentAudienceIndex + 1) {
+                    targetIndex = currentAudienceIndex + 1;
+                } else if (index < currentAudienceIndex - 1) {
+                    targetIndex = currentAudienceIndex - 1;
+                }
+
+                const cards = audienceSplit.querySelectorAll('.audience-card');
+                if (cards[targetIndex]) {
+                    cards[targetIndex].scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'nearest',
+                        inline: 'center'
+                    });
+                    currentAudienceIndex = targetIndex;
+                }
+            });
+        });
+    }
+
     // --- Modal Functionality ---
     const modal = document.getElementById('leadModal');
     const modalClose = document.getElementById('modalClose');

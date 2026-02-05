@@ -142,6 +142,8 @@ span {
 .service-card {
     min-width: 95%;
     scroll-snap-align: center;
+    scroll-snap-stop: always;
+    /* Prevent skipping slides */
     background: var(--bg-card);
     border-radius: 15px;
     overflow: hidden;
@@ -176,6 +178,51 @@ span {
 
 .service-card:hover {
     transform: translateY(-5px);
+}
+
+/* Audience Section Carousel (Mobile) */
+.audience-split {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1.5rem;
+    padding: 0 1rem;
+    padding-bottom: 1rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.audience-split::-webkit-scrollbar {
+    display: none;
+}
+
+.audience-card {
+    min-width: 95%;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    flex-shrink: 0;
+}
+
+/* Audience Pagination Dots */
+.audience-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 1rem 0 2rem;
+}
+
+.audience-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.audience-dot.active {
+    background-color: var(--primary);
+    transform: scale(1.2);
 }
 
 .card-image {
