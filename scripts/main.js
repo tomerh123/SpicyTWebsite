@@ -5,13 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Mobile Services Carousel ---
     const servicesGrid = document.querySelector('.services-grid');
     const serviceDots = document.querySelectorAll('.service-dot');
+    let currentServiceIndex = 0;
 
     if (servicesGrid && serviceDots.length > 0) {
         // Update dots on scroll
         servicesGrid.addEventListener('scroll', () => {
             const scrollLeft = servicesGrid.scrollLeft;
-            const cardWidth = servicesGrid.offsetWidth; // Approximate width of view
+            const cardWidth = servicesGrid.offsetWidth;
             const index = Math.round(scrollLeft / cardWidth);
+            currentServiceIndex = index;
 
             serviceDots.forEach((dot, i) => {
                 if (i === index) {
@@ -22,23 +24,25 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Click dot to scroll
+        // Click dot to scroll - only allow one step at a time
         serviceDots.forEach((dot, index) => {
             dot.addEventListener('click', () => {
-                const cardWidth = servicesGrid.querySelector('.service-card').offsetWidth;
-                const gap = 24; // 1.5rem gap (approx 24px)
-                // Scroll to the card position
-                // Note: The first card starts at 0. 
-                // We need to account for the width + gap for subsequent cards
-                // But since we use scroll-snap-align: center, smooth scroll might rely on element position
+                // Only allow scrolling to adjacent slides
+                let targetIndex = index;
+                if (index > currentServiceIndex + 1) {
+                    targetIndex = currentServiceIndex + 1;
+                } else if (index < currentServiceIndex - 1) {
+                    targetIndex = currentServiceIndex - 1;
+                }
 
                 const cards = servicesGrid.querySelectorAll('.service-card');
-                if (cards[index]) {
-                    cards[index].scrollIntoView({
+                if (cards[targetIndex]) {
+                    cards[targetIndex].scrollIntoView({
                         behavior: 'smooth',
                         block: 'nearest',
                         inline: 'center'
                     });
+                    currentServiceIndex = targetIndex;
                 }
             });
         });
