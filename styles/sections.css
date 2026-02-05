@@ -341,7 +341,7 @@
 
 .difference-card h4 i {
     position: absolute;
-    left: 0;
+    left: -1.5rem;
     top: 50%;
     transform: translateY(-50%);
 }
