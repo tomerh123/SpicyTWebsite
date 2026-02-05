@@ -52,8 +52,13 @@ span {
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 8vw, 2.8rem);
     margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.hero h1 .text-gradient {
+    white-space: nowrap;
 }
 
 .hero p {
