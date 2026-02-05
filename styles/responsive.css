@@ -55,13 +55,49 @@
 }
 
 .services-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    /* 1 column mobile */
-    gap: 2rem;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.services-grid::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+/* Service Pagination Dots (Mobile) */
+.services-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: -1rem;
+    /* Pull up closer to cards */
+    padding-bottom: 2rem;
+}
+
+.service-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.service-dot.active {
+    background-color: var(--primary);
+    transform: scale(1.2);
 }
 
 .service-card {
+    min-width: 85%;
+    /* Show peek of next card */
+    scroll-snap-align: center;
     background: var(--bg-card);
     border-radius: 15px;
     overflow: hidden;
@@ -233,6 +269,14 @@
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
         /* 2 columns tablet */
+        display: grid;
+        /* Reset flex to grid */
+        overflow-x: visible;
+        padding-bottom: 0;
+    }
+
+    .services-pagination {
+        display: none;
     }
 
     .why-grid {
@@ -265,6 +309,7 @@
     .services-grid {
         grid-template-columns: repeat(3, 1fr);
         /* 3 columns desktop */
+        display: grid;
     }
 
     .contact-wrapper {
