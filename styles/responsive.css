@@ -95,8 +95,7 @@
 }
 
 .service-card {
-    min-width: 85%;
-    /* Show peek of next card */
+    min-width: 95%;
     scroll-snap-align: center;
     background: var(--bg-card);
     border-radius: 15px;
@@ -105,23 +104,29 @@
     transition: var(--transition);
 }
 
-
-
 .service-content {
-    padding: 1rem 1rem 1.5rem;
-    /* Reduced padding for mobile */
+    padding: 0.75rem 1rem 1rem !important;
+    text-align: center;
+}
+
+.service-icon {
+    width: 50px !important;
+    height: 50px !important;
+    margin: 0 auto 0.75rem !important;
+}
+
+.service-icon i {
+    font-size: 1.3rem !important;
 }
 
 .service-card h3 {
-    font-size: 1.25rem;
-    /* Slightly smaller header */
-    margin-bottom: 0.5rem;
+    font-size: 1.1rem !important;
+    margin-bottom: 0.4rem !important;
 }
 
 .service-card p {
-    font-size: 0.9rem;
-    /* Slightly compact text */
-    line-height: 1.5;
+    font-size: 0.85rem !important;
+    line-height: 1.4 !important;
 }
 
 .service-card:hover {
