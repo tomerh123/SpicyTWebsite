@@ -271,10 +271,10 @@
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    gap: 2rem;
-    padding-left: 5%;
-    padding-right: 5%;
+    gap: 1rem;
+    padding: 0;
     padding-bottom: 2rem;
+    scroll-padding-inline: 2.5%;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
 }
@@ -314,12 +314,13 @@
 }
 
 .difference-card {
-    flex: 0 0 95%;
+    flex: 0 0 90%;
     scroll-snap-align: center;
     padding: 2rem;
     border-radius: 12px;
     text-align: center;
-    margin: 0 auto;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .difference-card.bad {
