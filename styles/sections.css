@@ -334,12 +334,16 @@
 .difference-card h4 {
     font-size: 1.1rem;
     margin-bottom: 1rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.4rem;
-    width: 100%;
+    position: relative;
     text-align: center;
+    padding-left: 0;
+}
+
+.difference-card h4 i {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .difference-card.bad h4 {
