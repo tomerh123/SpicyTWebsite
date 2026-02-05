@@ -265,19 +265,22 @@ nav {
 @media (max-width: 768px) {
     .nav-links {
         display: none;
-        /* Mobile menu needed */
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        top: 100px;
+        /* Below header */
         left: 0;
+        right: 0;
         width: 100%;
+        transform: none;
+        /* Reset desktop centering */
         background: var(--bg-dark);
         flex-direction: column;
         padding: 2rem;
-        padding-left: 2rem;
         text-align: center;
         align-items: center;
         gap: 1.5rem;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 999;
     }
 
     .nav-links.active {
