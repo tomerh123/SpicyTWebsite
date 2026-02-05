@@ -19,10 +19,10 @@ span {
     padding-right: 1.5rem !important;
 }
 
-/* Larger section titles on mobile (close to max) */
+/* Maximum responsive section titles on mobile */
 .section-title {
-    font-size: 1.9rem !important;
-    line-height: 1.25;
+    font-size: clamp(1.8rem, 6vw, 2.5rem) !important;
+    line-height: 1.2;
 }
 
 .section-subtitle {
