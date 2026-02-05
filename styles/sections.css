@@ -272,11 +272,11 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 2rem;
-    padding: 0 2.5%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
     padding-bottom: 2rem;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    justify-content: center;
 }
 
 .carousel-container::-webkit-scrollbar {
@@ -319,6 +319,7 @@
     padding: 2rem;
     border-radius: 12px;
     text-align: center;
+    margin: 0 auto;
 }
 
 .difference-card.bad {
