@@ -93,6 +93,52 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Reliability (Difference) Carousel ---
+    const differenceContainer = document.querySelector('.carousel-container');
+    const differenceDots = document.querySelectorAll('.difference-dot');
+    let currentDifferenceIndex = 0;
+
+    if (differenceContainer && differenceDots.length > 0) {
+        // Update dots on scroll
+        differenceContainer.addEventListener('scroll', () => {
+            const scrollLeft = differenceContainer.scrollLeft;
+            const cardWidth = differenceContainer.offsetWidth; // Viewport width
+            const index = Math.round(scrollLeft / cardWidth);
+            currentDifferenceIndex = index;
+
+            differenceDots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        });
+
+        // Click dot to scroll
+        differenceDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                let targetIndex = index;
+                // Since there are only 2 cards, one-by-one check is simple but keeping consistent logic
+                if (index > currentDifferenceIndex + 1) {
+                    targetIndex = currentDifferenceIndex + 1;
+                } else if (index < currentDifferenceIndex - 1) {
+                    targetIndex = currentDifferenceIndex - 1;
+                }
+
+                const cards = differenceContainer.querySelectorAll('.difference-card');
+                if (cards[targetIndex]) {
+                    cards[targetIndex].scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'nearest',
+                        inline: 'center'
+                    });
+                    currentDifferenceIndex = targetIndex;
+                }
+            });
+        });
+    }
+
     // --- Modal Functionality ---
     const modal = document.getElementById('leadModal');
     const modalClose = document.getElementById('modalClose');
