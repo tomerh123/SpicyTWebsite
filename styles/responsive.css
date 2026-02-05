@@ -105,6 +105,26 @@
     transition: var(--transition);
 }
 
+transition: var(--transition);
+}
+
+.service-content {
+    padding: 1rem 1rem 1.5rem;
+    /* Reduced padding for mobile */
+}
+
+.service-card h3 {
+    font-size: 1.25rem;
+    /* Slightly smaller header */
+    margin-bottom: 0.5rem;
+}
+
+.service-card p {
+    font-size: 0.9rem;
+    /* Slightly compact text */
+    line-height: 1.5;
+}
+
 .service-card:hover {
     transform: translateY(-5px);
 }
