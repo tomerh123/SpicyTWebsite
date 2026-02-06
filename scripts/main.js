@@ -177,30 +177,74 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Modal form submission
-    modalForm.addEventListener('submit', (e) => {
+    // Modal form submission
+    modalForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         const btn = modalForm.querySelector('button[type="submit"]');
         const originalText = btn.innerText;
 
+        // --- CONFIGURATION ---
+        // STEP 1: Paste your Formspree Form ID here
+        const FORMSPREE_ID = 'YOUR_FORM_ID_HERE';
+        // ---------------------
+
+        if (FORMSPREE_ID === 'YOUR_FORM_ID_HERE') {
+            alert('Form integration is not set up yet! Please add your Formspree ID in scripts/main.js');
+            return;
+        }
+
         btn.innerText = 'Sending...';
         btn.disabled = true;
 
-        // Simulate form submission
-        setTimeout(() => {
-            btn.innerText = 'Sent Successfully!';
-            btn.style.backgroundColor = '#28a745';
+        const formData = new FormData(modalForm);
 
-            modalForm.reset();
+        try {
+            const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                // Success State
+                btn.innerText = 'Sent Successfully!';
+                btn.style.backgroundColor = '#28a745';
+                modalForm.reset();
+
+                setTimeout(() => {
+                    closeModal();
+                    // Reset button state after closing
+                    setTimeout(() => {
+                        btn.innerText = originalText;
+                        btn.disabled = false;
+                        btn.style.backgroundColor = '';
+                    }, 500);
+                    // Optional: Redirect to a Thank You page if desired
+                }, 2000);
+            } else {
+                // Server returned an error
+                const data = await response.json();
+                if (Object.hasOwn(data, 'errors')) {
+                    throw new Error(data.errors.map(error => error.message).join(", "));
+                } else {
+                    throw new Error('Submission failed');
+                }
+            }
+        } catch (error) {
+            console.error('Submission Error:', error);
+            btn.innerText = 'Error! Try Again.';
+            btn.style.backgroundColor = '#dc3545';
 
             setTimeout(() => {
                 btn.innerText = originalText;
                 btn.disabled = false;
                 btn.style.backgroundColor = '';
-                closeModal();
-                alert('Thank you! Your request has been received. We will contact you within 2 hours.');
-            }, 2000);
-        }, 1500);
+                alert('There was a problem sending your message. Please try calling us directly.');
+            }, 3000);
+        }
     });
 
     // --- Mobile Navigation ---
