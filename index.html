@@ -424,10 +424,12 @@
     <div class="action-sheet-overlay" id="phoneActionSheet">
         <div class="action-sheet">
             <div class="action-sheet-header">(818) 445-6361</div>
-            <a href="tel:8184456361" class="action-sheet-option">
+            <a href="tel:+18184456361" class="action-sheet-option"
+                onclick="document.getElementById('phoneActionSheet').classList.remove('active'); document.body.style.overflow = '';">
                 <i class="fa-solid fa-phone"></i> Call
             </a>
-            <a href="sms:8184456361?body=Hi! I'm interested in SpicyT AV services." class="action-sheet-option">
+            <a href="sms:+18184456361?body=Hi! I'm interested in SpicyT AV services." class="action-sheet-option"
+                onclick="document.getElementById('phoneActionSheet').classList.remove('active'); document.body.style.overflow = '';">
                 <i class="fa-solid fa-message"></i> Text
             </a>
             <button class="action-sheet-cancel" id="actionSheetCancel">Cancel</button>
