@@ -1066,7 +1066,8 @@ footer {
     gap: 0.5rem;
 }
 
-.btn-secondary {
+.btn-secondary,
+.btn-secondary:visited {
     background: transparent;
     border: 2px solid var(--primary);
     color: var(--primary);
