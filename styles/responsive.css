@@ -156,15 +156,25 @@ span {
     transition: var(--transition);
 }
 
+/* Compress Contact Section */
+.contact.section-padding {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+}
+
+.modal-content {
+    padding: 1.5rem !important;
+}
+
 .service-content {
-    padding: 0.75rem 1rem 1rem !important;
+    padding: 0.5rem 1rem 0.6rem !important;
     text-align: center;
 }
 
 .service-icon {
-    width: 50px !important;
-    height: 50px !important;
-    margin: 0 auto 0.75rem !important;
+    width: 45px !important;
+    height: 45px !important;
+    margin: 0 auto 0.5rem !important;
 }
 
 .service-icon i {
