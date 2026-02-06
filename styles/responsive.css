@@ -218,13 +218,16 @@ span {
 }
 
 .form-note {
-    margin-top: 1.5rem;
-    color: #888;
+    margin-top: 0.8rem;
+    color: #999;
     font-size: 0.85rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
+    text-align: center;
+    display: block;
+}
+
+.form-note i {
+    margin-right: 0.4rem;
+    color: var(--primary);
 }
 
 /* Service Card Trims */
