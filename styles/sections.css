@@ -1074,9 +1074,11 @@ footer {
     text-decoration: none;
 }
 
-.btn-secondary:hover {
-    background: var(--primary);
-    color: #000;
+@media (hover: hover) {
+    .btn-secondary:hover {
+        background: var(--primary);
+        color: #000;
+    }
 }
 
 /* Action Sheet (Call/Text Picker) */
