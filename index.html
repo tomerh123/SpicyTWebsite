@@ -307,7 +307,7 @@
                             <i class="fa-solid fa-phone-volume"></i>
                             <div>
                                 <h5>Call or Text</h5>
-                                <a href="tel:8184456361">(818) 445-6361</a>
+                                <a href="#" id="phoneActionTrigger" class="phone-action-link">(818) 445-6361</a>
                             </div>
                         </div>
                         <div class="method">
@@ -417,6 +417,20 @@
                 class="btn btn-secondary">
                 <i class="fa-solid fa-message"></i> Text Us
             </a>
+        </div>
+    </div>
+
+    <!-- Phone Action Sheet -->
+    <div class="action-sheet-overlay" id="phoneActionSheet">
+        <div class="action-sheet">
+            <div class="action-sheet-header">(818) 445-6361</div>
+            <a href="tel:8184456361" class="action-sheet-option">
+                <i class="fa-solid fa-phone"></i> Call
+            </a>
+            <a href="sms:8184456361?body=Hi! I'm interested in SpicyT AV services." class="action-sheet-option">
+                <i class="fa-solid fa-message"></i> Text
+            </a>
+            <button class="action-sheet-cancel" id="actionSheetCancel">Cancel</button>
         </div>
     </div>
 </body>

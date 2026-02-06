@@ -336,6 +336,45 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- Phone Action Sheet Logic ---
+    const phoneTrigger = document.getElementById('phoneActionTrigger');
+    const phoneActionSheet = document.getElementById('phoneActionSheet');
+    const actionSheetCancel = document.getElementById('actionSheetCancel');
+
+    if (phoneTrigger && phoneActionSheet) {
+        // Open
+        phoneTrigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            phoneActionSheet.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        // Close functions
+        const closeActionSheet = () => {
+            phoneActionSheet.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        // Close on Cancel
+        if (actionSheetCancel) {
+            actionSheetCancel.addEventListener('click', closeActionSheet);
+        }
+
+        // Close on Overlay Click
+        phoneActionSheet.addEventListener('click', (e) => {
+            if (e.target === phoneActionSheet) {
+                closeActionSheet();
+            }
+        });
+
+        // Close on Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && phoneActionSheet.classList.contains('active')) {
+                closeActionSheet();
+            }
+        });
+    }
+
     // --- Contact Form Handling (inline form on page) ---
     const leadForm = document.getElementById('leadForm');
 
