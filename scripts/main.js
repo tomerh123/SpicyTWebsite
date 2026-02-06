@@ -185,8 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const originalText = btn.innerText;
 
         // --- CONFIGURATION ---
-        // STEP 1: Paste your Formspree Form ID here
-        const FORMSPREE_ID = 'YOUR_FORM_ID_HERE';
+        const FORMSPREE_ID = 'maqdwkvb';
         // ---------------------
 
         if (FORMSPREE_ID === 'YOUR_FORM_ID_HERE') {
