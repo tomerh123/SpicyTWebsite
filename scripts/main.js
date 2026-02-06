@@ -239,6 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.getElementById('header');
     const stickyCta = document.querySelector('.sticky-mobile-cta');
     const heroSection = document.querySelector('.hero');
+    const contactSection = document.getElementById('contact') || document.querySelector('.contact');
 
     window.addEventListener('scroll', () => {
         // Header scroll effect
@@ -251,7 +252,19 @@ document.addEventListener('DOMContentLoaded', () => {
         // Show sticky CTA only after scrolling past hero (mobile only)
         if (stickyCta && heroSection && window.innerWidth < 768) {
             const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
-            if (window.scrollY > heroBottom - 100) {
+            const scrolledPastHero = window.scrollY > heroBottom - 100;
+
+            let contactVisible = false;
+            if (contactSection) {
+                const rect = contactSection.getBoundingClientRect();
+                // Check if contact section is visible in viewport
+                // We add a buffer so it disappears just as the section comes into view
+                if (rect.top < window.innerHeight - 50) {
+                    contactVisible = true;
+                }
+            }
+
+            if (scrolledPastHero && !contactVisible) {
                 stickyCta.classList.add('visible');
             } else {
                 stickyCta.classList.remove('visible');
