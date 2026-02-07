@@ -641,4 +641,11 @@ span {
         font-weight: 700;
         letter-spacing: 1px;
     }
+
+    /* Center Footer Socials */
+    .footer-brand,
+    .social-links {
+        text-align: center;
+        justify-content: center;
+    }
 }
