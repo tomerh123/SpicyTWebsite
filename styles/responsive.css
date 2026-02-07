@@ -633,4 +633,12 @@ span {
         padding-top: 8rem;
         padding-bottom: 6rem;
     }
+
+    /* Larger Hero Button */
+    .hero-btns .btn {
+        padding: 1.25rem 3rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
 }
