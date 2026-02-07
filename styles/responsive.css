@@ -642,10 +642,31 @@ span {
         letter-spacing: 1px;
     }
 
-    /* Center Footer Socials */
-    .footer-brand,
-    .social-links {
-        text-align: center;
+    /* Balanced Footer Layout */
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr) !important;
+        /* Force equal columns */
         justify-content: center;
+        text-align: center;
+    }
+
+    /* Center ALL footer sections */
+    .footer-brand,
+    .footer-links,
+    .footer-legal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        /* Or center vertically? */
+    }
+
+    /* Flex containers need center alignment */
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-links ul {
+        align-items: center;
     }
 }
