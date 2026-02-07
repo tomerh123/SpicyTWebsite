@@ -617,3 +617,20 @@ span {
     background: rgba(10, 10, 10, 0.7);
     /* Darken image */
 }
+
+/* ========================================
+   DESKTOP FIXES (1024px+)
+   These rules override sections.css
+   ======================================== */
+@media (min-width: 768px) {
+    .difference-pagination {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-content {
+        padding-top: 8rem;
+        padding-bottom: 6rem;
+    }
+}
