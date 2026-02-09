@@ -797,12 +797,11 @@ footer {
 }
 
 /* Hover only on pointer devices */
-@media (hover: hover) {
-    .social-links a:hover {
-        background: var(--primary);
-        color: #000;
-        /* Better contrast on hover */
-    }
+.social-links a:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(255, 107, 53, 0.4);
 }
 
 .footer-links h4 {
