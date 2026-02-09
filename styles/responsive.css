@@ -458,6 +458,14 @@ span {
     justify-content: center;
     color: white;
     text-decoration: none;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(255, 107, 53, 0.4);
 }
 
 /* Tablet (768px+) */
