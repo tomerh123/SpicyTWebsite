@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://spicytav.com/sitemap.xml
