@@ -41,8 +41,9 @@ span {
 }
 
 .brand-logo {
-    height: 25px;
-    margin: 0 1rem;
+    height: 30px;
+    max-width: 100px;
+    margin: 0 0.8rem;
 }
 
 .hero h1 {
