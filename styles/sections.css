@@ -231,23 +231,22 @@
     animation-play-state: paused;
 }
 
-.brand-item {
-    font-family: var(--font-header);
-    font-size: 2rem;
-    font-weight: 800;
-    color: rgba(255, 255, 255, 0.3);
-    /* Muted by default */
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: default;
+.brand-logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.5;
+    filter: brightness(0) invert(1);
+    /* Make white */
     transition: var(--transition);
-    user-select: none;
+    cursor: pointer;
 }
 
-.brand-item:hover {
-    color: var(--primary);
-    transform: scale(1.05);
-    text-shadow: 0 0 20px rgba(255, 107, 53, 0.4);
+.brand-logo:hover {
+    opacity: 1;
+    filter: none;
+    /* Restore original color */
+    transform: scale(1.1);
 }
 
 @keyframes marquee-scroll {
