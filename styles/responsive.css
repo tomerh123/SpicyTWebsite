@@ -677,24 +677,3 @@ span {
         align-items: center;
     }
 }
-
-/* ========================================
-   BRANDS SECTION MOBILE
-   ======================================== */
-.brands {
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
-}
-
-.brands-grid {
-    gap: 1rem !important;
-    margin-top: 1.5rem !important;
-}
-
-.brand-item {
-    padding: 1rem !important;
-}
-
-.brand-logo {
-    max-width: 90px !important;
-}
