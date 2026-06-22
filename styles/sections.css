@@ -316,35 +316,11 @@
 .difference-card {
     flex: 0 0 90%;
     scroll-snap-align: center;
+    padding: 2rem;
     border-radius: 12px;
     text-align: center;
     margin-left: 5%;
     margin-right: 5%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-.difference-card .card-image-wrapper {
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-}
-
-.difference-card .card-image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.difference-card:hover .card-image-wrapper img {
-    transform: scale(1.05);
-}
-
-.difference-card .card-text {
-    padding: 2rem;
-    flex: 1;
 }
 
 .difference-card.bad {
@@ -422,9 +398,6 @@
     .difference-card,
     .difference-image-card {
         flex: 0 0 42%;
-    }
-
-    .difference-card .card-text {
         padding: 3rem;
     }
 }
