@@ -236,8 +236,8 @@
 }
 
 .brand-logo {
-    height: 60px;
-    max-width: 240px;
+    height: clamp(30px, 4vw, 60px);
+    max-width: clamp(120px, 15vw, 240px);
     color: #ffffff;
     opacity: 0.4;
     transition: opacity 0.3s ease;

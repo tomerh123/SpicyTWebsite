@@ -42,9 +42,6 @@ span {
     gap: 2rem;
 }
 
-.brand-logo {
-    height: 20px;
-}
 
 /* Base overrides for mobile */
 .hero-content {
