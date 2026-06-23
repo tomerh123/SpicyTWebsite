@@ -235,17 +235,15 @@
     gap: 4rem;
 }
 
-.brand-text {
-    font-size: 1.5rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+.brand-logo {
+    height: 35px;
+    max-width: 140px;
     color: #ffffff;
     opacity: 0.4;
     transition: opacity 0.3s ease;
 }
 
-.brand-text:hover {
+.brand-logo:hover {
     opacity: 0.8;
 }
 

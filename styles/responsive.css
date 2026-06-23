@@ -42,8 +42,8 @@ span {
     gap: 2rem;
 }
 
-.brand-text {
-    font-size: 1rem;
+.brand-logo {
+    height: 20px;
 }
 
 /* Base overrides for mobile */
