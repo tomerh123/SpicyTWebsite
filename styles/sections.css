@@ -189,75 +189,63 @@
 /* ========================================
    TRUST BAR
    ======================================== */
-.trust-bar {
-    background: #111;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 1.5rem 0;
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    z-index: 10;
-}
-
-.trust-track {
-    display: inline-block;
-    animation: slide-left 40s linear infinite;
-    /* Pause on hover for accessibility */
-}
-
-.trust-track:hover {
-    animation-play-state: paused;
-}
-
-.trust-slide {
-    display: inline-flex;
+/* Hero Trust Badges */
+.hero-trust-badges {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 4rem;
-    padding-right: 4rem;
-}
-
-.trust-item {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.8rem;
-    opacity: 0.6;
-    transition: var(--transition);
-}
-
-.trust-item:hover {
-    opacity: 1;
-    color: var(--primary);
-}
-
-.trust-item i {
-    font-size: 1.1rem;
-    color: var(--primary);
-}
-
-.trust-item span {
+    gap: 1rem;
+    color: var(--text-secondary);
     font-size: 0.85rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--text-secondary);
+    letter-spacing: 1.5px;
+    opacity: 0.8;
 }
 
-.trust-item.brand-logo img {
-    height: 20px;
-    width: auto;
-    filter: brightness(0) invert(1);
+.hero-trust-badges .dot-separator {
+    color: var(--primary);
     opacity: 0.7;
 }
 
-@keyframes slide-left {
-    from {
-        transform: translateX(0);
-    }
+/* Engineered With (Brand Grid) */
+.engineered-with {
+    background: #0d0d0d;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 3rem 0;
+    text-align: center;
+}
 
-    to {
-        transform: translateX(-50%);
-    }
+.engineered-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.brand-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.brand-logo {
+    height: 30px;
+    max-width: 140px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+.brand-logo:hover {
+    opacity: 0.8;
 }
 
 

@@ -31,17 +31,20 @@ span {
 }
 
 /* Smaller trust bar scrolling loop on mobile */
-.trust-bar {
-    padding: 0.75rem 0 !important;
+/* Smaller spacing for trust badges on mobile */
+.hero-trust-badges {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.7rem;
 }
 
-.trust-bar .trust-item {
-    font-size: 0.75rem !important;
-    gap: 0.4rem !important;
+.brand-grid {
+    gap: 2rem;
 }
 
-.trust-bar .trust-item i {
-    font-size: 1rem !important;
+.brand-logo {
+    height: 20px;
+    max-width: 100px;
 }
 
 /* Base overrides for mobile */
